@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "MenuItem": {
+      "title": "MenuItem",
+      "description": "A menu item of Bahia Gurme Burger",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "isAvailable": { "type": "boolean" }
+      },
+      "required": ["id", "name", "price", "description", "category", "isAvailable"]
+    }
+  },
+  "firestore": {
+    "/menu_items/{itemId}": {
+      "schema": "MenuItem",
+      "description": "Restaurant menu items stored in Firestore"
+    }
+  }
+}
